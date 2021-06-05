@@ -127,7 +127,7 @@ class SomePainter extends CustomPainter {
           final style = TextStyle(
             fontSize: _fontSize,
             color: Colors.white,
-            //fontFamilyFallback: fontFamilyFallbacks,
+            fontFamily: 'Cascadia Mono',
           );
           final span = TextSpan(
             text: nextChar,
@@ -159,7 +159,6 @@ class SomePainter extends CustomPainter {
       fontSize: 24,
       fontWeight: FontWeight.bold,
       color: Colors.red,
-      //fontFamilyFallback: fontFamilyFallbacks,
     );
     final spanFontSize = TextSpan(
       text: _fontSize.toString(),
@@ -196,31 +195,3 @@ class SomePainter extends CustomPainter {
     return true;
   }
 }
-
-// this is the font tricks that xterm.dart has to do
-
-const fontFamilyFallbacks = [
-  'Monaco',
-  'Droid Sans Mono',
-  'Noto Sans Mono',
-  'Roboto Mono',
-  'Consolas',
-  'Noto Sans Mono CJK SC',
-  'Noto Sans Mono CJK TC',
-  'Noto Sans Mono CJK KR',
-  'Noto Sans Mono CJK JP',
-  'Noto Sans Mono CJK HK',
-  'Noto Color Emoji',
-  'Noto Sans Symbols',
-  'Roboto',
-  'Ubuntu',
-  'Cantarell',
-  'DejaVu Sans',
-  'Liberation Sans',
-  'Arial',
-  'Droid Sans Fallback',
-  'Cascadia Mono',
-  'Arial Unicode MS',
-  'sans-serif',
-  'monospace',
-];
